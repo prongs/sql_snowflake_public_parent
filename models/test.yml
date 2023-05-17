@@ -1,0 +1,15 @@
+---
+version: 2
+sources:
+- name: "test"
+  tables:
+  - name: "test-tb"
+    tags:
+    - "new"
+    columns:
+    - name: "new col"
+      dataType:
+        type: "Object"
+    - name: "test2"
+      dataType:
+        type: "String"

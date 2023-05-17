@@ -55,7 +55,9 @@ Reformat_1 AS (
     C_OBJECT AS C_OBJECT,
     C_GEOGRAPHY AS C_GEOGRAPHY,
     {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_macro1,
-    concat({{ SQL_SnoflakeMainProject.qa_concat_macro('c_string') }}, {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}) AS c_macro2,
+    concat(
+      {{ SQL_SnoflakeMainProject.qa_concat_macro('c_string') }}, 
+      {{ SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column('c_string') }}) AS c_macro2,
     {% if v_model_int_main > 10 and                         var('v_project_int_parent') %}
       {{ SQL_SnoflakeMainProject.qa_boolean_macro('c_string') }} AS c_if,
     {% else %}
