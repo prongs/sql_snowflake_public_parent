@@ -358,7 +358,7 @@
       "component" : "Reformat",
       "metadata" : {
         "label" : "Reformat_1",
-        "x" : 320,
+        "x" : 300,
         "y" : 120,
         "phase" : 0,
         "macroDependencies" : [ "SQL_SnoflakeMainProject.qa_boolean_macro", "SQL_SnoflakeMainProject.qa_concat_macro", "SQL_BaseGitDepProjectAllFinal.qa_concat_macro_base_column" ]
@@ -943,7 +943,7 @@
       "component" : "Seed",
       "metadata" : {
         "label" : "raw_orders",
-        "x" : 320,
+        "x" : 300,
         "y" : 320,
         "phase" : 0
       },
