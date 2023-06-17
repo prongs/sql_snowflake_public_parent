@@ -24,6 +24,8 @@ WITH ALL_TYPE_TABLE_SMALLER AS (
 
 Reformat_1 AS (
 
+  {#this is filter nopde
+  this is filter only buddy#}
   SELECT 
     C_NUM AS C_NUM,
     C_NUM10 AS C_NUM10,
