@@ -22,6 +22,70 @@ WITH ALL_TYPE_TABLE_SMALLER AS (
 
 ),
 
+all_type_table AS (
+
+  SELECT * 
+  
+  FROM {{ source('"qa_database"."qa_SCHEMA"', '"all_type_table"') }}
+
+),
+
+all_type_table_3 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alisa_qa_database_qa_SIMPLE_schema', '"all_type_table"') }}
+
+),
+
+all_type_table_2 AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"all_type_table"') }}
+
+),
+
+Employees_qa_SCHEMA AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"Employees_qa_SCHEMA"') }}
+
+),
+
+ALL_TYPE_Table AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"ALL_TYPE_Table"') }}
+
+),
+
+Join_2 AS (
+
+  SELECT 
+    in3.TITLE AS TITLE,
+    in3.EMPLOYEE_ID AS EMPLOYEE_ID,
+    in3.MANAGER_ID AS MANAGER_ID,
+    in5.C_INT AS C_INT,
+    in5.C_STRING AS C_STRING,
+    in2.C_NUMERIC AS C_NUMERIC,
+    in1.C_REAL AS C_REAL,
+    in0.C_VARCHAR AS C_VARCHAR
+  
+  FROM all_type_table AS in0
+  INNER JOIN all_type_table_3 AS in1
+     ON in0.c_int = in1.c_int
+  INNER JOIN all_type_table_2 AS in2
+     ON in1.c_int = in2.c_int
+  INNER JOIN Employees_qa_SCHEMA AS in3
+     ON in2.C_NUM != in3.EMPLOYEE_ID
+  INNER JOIN ALL_TYPE_Table AS in5
+     ON in3.EMPLOYEE_ID != in5.C_INT
+
+),
+
 Reformat_1 AS (
 
   {#this is filter nopde
@@ -78,6 +142,16 @@ Reformat_1 AS (
 
 ),
 
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM Join_2 AS in0
+  
+  LIMIT 10
+
+),
+
 raw_orders AS (
 
   SELECT * 
@@ -122,6 +196,8 @@ Join_1 AS (
   FROM Reformat_1 AS in0
   INNER JOIN raw_orders AS in1
      ON in0.C_STRING != in1.status
+  INNER JOIN Limit_1 AS in2
+     ON in1.status != in2.TITLE
 
 )
 
