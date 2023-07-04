@@ -199,6 +199,22 @@ Join_1 AS (
   INNER JOIN Limit_1 AS in2
      ON in1.status != in2.TITLE
 
+),
+
+TABLE_COMPLEX_TYPES_1_1 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alias_base_QA_DATABASE_QA_SIMPLE_SCHEMA', 'TABLE_COMPLEX_TYPES_1') }}
+
+),
+
+Reformat_2 AS (
+
+  SELECT * 
+  
+  FROM TABLE_COMPLEX_TYPES_1_1 AS in0
+
 )
 
 SELECT *
