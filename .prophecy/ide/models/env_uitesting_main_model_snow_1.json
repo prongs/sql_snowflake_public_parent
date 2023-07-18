@@ -384,8 +384,8 @@
       "metadata" : {
         "label" : "Reformat_2",
         "slug" : "Reformat_2",
-        "x" : 380,
-        "y" : 780,
+        "x" : 440,
+        "y" : 740,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -2887,8 +2887,8 @@
       "metadata" : {
         "label" : "Join_2",
         "slug" : "Join_2",
-        "x" : 100,
-        "y" : 440,
+        "x" : 20,
+        "y" : 400,
         "phase" : 0,
         "macroDependencies" : [ ],
         "dataExplorerProps" : {
