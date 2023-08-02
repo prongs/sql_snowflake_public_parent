@@ -384,8 +384,8 @@
       "metadata" : {
         "label" : "Reformat_2",
         "slug" : "Reformat_2",
-        "x" : 440,
-        "y" : 620,
+        "x" : 480,
+        "y" : 660,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
