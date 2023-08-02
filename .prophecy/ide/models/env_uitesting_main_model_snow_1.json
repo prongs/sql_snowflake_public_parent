@@ -385,7 +385,7 @@
         "label" : "Reformat_2",
         "slug" : "Reformat_2",
         "x" : 440,
-        "y" : 740,
+        "y" : 620,
         "phase" : 0,
         "macroDependencies" : [ ]
       },
@@ -2775,8 +2775,8 @@
       "metadata" : {
         "label" : "TABLE_COMPLEX_TYPES_1_1",
         "slug" : "TABLE_COMPLEX_TYPES_1_1",
-        "x" : 200,
-        "y" : 780,
+        "x" : 60,
+        "y" : 660,
         "phase" : 0
       },
       "properties" : {
