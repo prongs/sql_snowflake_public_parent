@@ -2554,8 +2554,8 @@
       "metadata" : {
         "label" : "Employees_qa_SCHEMA",
         "slug" : "Employees_qa_SCHEMA",
-        "x" : -300,
-        "y" : 600,
+        "x" : -360,
+        "y" : 620,
         "phase" : 0
       },
       "properties" : {
