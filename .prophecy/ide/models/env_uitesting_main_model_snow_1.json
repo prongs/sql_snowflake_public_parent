@@ -1165,8 +1165,8 @@
       "metadata" : {
         "label" : "all_type_table",
         "slug" : "all_type_table",
-        "x" : -300,
-        "y" : 220,
+        "x" : -320,
+        "y" : 180,
         "phase" : 0
       },
       "properties" : {
