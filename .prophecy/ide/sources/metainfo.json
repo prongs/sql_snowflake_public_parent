@@ -65,7 +65,47 @@
     }, {
       "type" : "Database",
       "name" : "QA_DATABASE",
-      "children" : [ ]
+      "children" : [ {
+        "type" : "Schema",
+        "name" : "INFORMATION_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "PUBLIC",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "QA_ANOTHER_SIMPLE_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "QA_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "QA_SIMPLE_SCHEMA",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "QA_SIMPLE_SCHEMA_JASVINDER",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "\"qa_SCHEMA\"",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "\"qa_SIMPLE_schema\"",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "\"qa_suggestion_database\"",
+        "children" : [ ]
+      }, {
+        "type" : "Schema",
+        "name" : "\"suggestion_database\"",
+        "children" : [ ]
+      } ]
     }, {
       "type" : "Database",
       "name" : "RJ",
