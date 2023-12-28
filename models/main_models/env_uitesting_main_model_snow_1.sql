@@ -5,8 +5,8 @@
 }}
 
 {% set v_model_int_main = 10 %}
-{% set v_model_dict_main = { 'a' : 10, 'b' : 15 } %}
-{% set v_model_dict_complex = { 'a' : 2, 'b' : 10, 'c' : [1, 2, 'hello'] } %}
+{% set v_model_dict_main = { 'a': 10, 'b': 15 } %}
+{% set v_model_dict_complex = { 'a': 2, 'b': 10, 'c': [1, 2, 'hello'] } %}
 {% set v_model_bool_main = True %}
 {% set v_model_expression = 'concat(c_string, c_text)' %}
 
@@ -22,27 +22,11 @@ WITH ALL_TYPE_TABLE_SMALLER AS (
 
 ),
 
-all_type_table AS (
+ALL_TYPE_Table AS (
 
   SELECT * 
   
-  FROM {{ source('"qa_database"."qa_SCHEMA"', '"all_type_table"') }}
-
-),
-
-all_type_table_3 AS (
-
-  SELECT * 
-  
-  FROM {{ source('alisa_qa_database_qa_SIMPLE_schema', '"all_type_table"') }}
-
-),
-
-all_type_table_2 AS (
-
-  SELECT * 
-  
-  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"all_type_table"') }}
+  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"ALL_TYPE_Table"') }}
 
 ),
 
@@ -54,11 +38,27 @@ Employees_qa_SCHEMA AS (
 
 ),
 
-ALL_TYPE_Table AS (
+all_type_table AS (
 
   SELECT * 
   
-  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"ALL_TYPE_Table"') }}
+  FROM {{ source('"qa_database"."qa_SCHEMA"', '"all_type_table"') }}
+
+),
+
+all_type_table_2 AS (
+
+  SELECT * 
+  
+  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"all_type_table"') }}
+
+),
+
+all_type_table_3 AS (
+
+  SELECT * 
+  
+  FROM {{ source('alisa_qa_database_qa_SIMPLE_schema', '"all_type_table"') }}
 
 ),
 
@@ -81,8 +81,18 @@ Join_2 AS (
      ON in1.c_int = in2.c_int
   INNER JOIN Employees_qa_SCHEMA AS in3
      ON in2.C_NUM != in3.EMPLOYEE_ID
-  INNER JOIN ALL_TYPE_Table AS in5
+  INNER JOIN all_type_table AS in5
      ON in3.EMPLOYEE_ID != in5.C_INT
+
+),
+
+Limit_1 AS (
+
+  SELECT * 
+  
+  FROM Join_2 AS in0
+  
+  LIMIT 10
 
 ),
 
@@ -139,16 +149,6 @@ Reformat_1 AS (
     concat('{{ dbt_utils.pretty_time() }}', '{{ dbt_utils.pretty_log_format("my pretty message") }}') AS c_dbutils_macro
   
   FROM ALL_TYPE_TABLE_SMALLER AS in0
-
-),
-
-Limit_1 AS (
-
-  SELECT * 
-  
-  FROM Join_2 AS in0
-  
-  LIMIT 10
 
 ),
 
