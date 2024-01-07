@@ -22,14 +22,6 @@ WITH ALL_TYPE_TABLE_SMALLER AS (
 
 ),
 
-ALL_TYPE_Table AS (
-
-  SELECT * 
-  
-  FROM {{ source('QA_DATABASE."qa_SCHEMA"', '"ALL_TYPE_Table"') }}
-
-),
-
 Employees_qa_SCHEMA AS (
 
   SELECT * 

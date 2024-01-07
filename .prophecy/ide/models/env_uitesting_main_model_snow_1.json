@@ -1984,46 +1984,6 @@
         "autoUpdateOnRun" : false
       }
     },
-    "ALL_TYPE_Table##FAxVQM0q" : {
-      "id" : "ALL_TYPE_Table##FAxVQM0q",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "ALL_TYPE_Table",
-        "x" : 20,
-        "y" : 1220,
-        "phase" : 0
-      },
-      "properties" : {
-        "table" : {
-          "name" : "\"ALL_TYPE_Table\"",
-          "sourceType" : "Source",
-          "sourceName" : "QA_DATABASE.\"qa_SCHEMA\""
-        }
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "yHdnMZvA",
-          "schema" : {
-            "providerType" : "snowflake",
-            "fields" : [ {
-              "name" : "C_INT",
-              "dataType" : {
-                "type" : "Number"
-              }
-            }, {
-              "name" : "C_STRING",
-              "dataType" : {
-                "type" : "String"
-              }
-            } ]
-          },
-          "slug" : "out"
-        } ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      }
-    },
     "Join_2##htQn58ak" : {
       "id" : "Join_2##htQn58ak",
       "component" : "Join",
