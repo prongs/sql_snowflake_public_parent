@@ -8,8 +8,9 @@
       "sources" : [ ]
     },
     "graphConfig" : {
-      "modelConfig" : {
-        "materialized" : "table"
+      "entityConfig" : {
+        "materialized" : "table",
+        "type" : "ModelConfig"
       },
       "userDefinedConfig" : {
         "vars" : {

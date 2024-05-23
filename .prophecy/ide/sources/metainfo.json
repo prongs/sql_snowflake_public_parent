@@ -6618,6 +6618,10 @@
     "dependencies" : { },
     "prophecyProjectDependencies" : { }
   },
-  "sourcesToSync" : [ ],
+  "entitiesToSync" : [ {
+    "name" : "env_uitesting_main_model_snow_1",
+    "type" : "Model",
+    "syncedOnce" : false
+  } ],
   "frontEndLanguage" : "sql"
 }
