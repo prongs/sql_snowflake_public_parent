@@ -1,3 +1,12 @@
+{{
+  config({    
+    "error_if": '< 1000',
+    "fail_calc": 'count(*)',
+    "severity": 'error',
+    "warn_if": '<5000'
+  })
+}}
+
 WITH env_uitesting_main_model_snow_1 AS (
 
   SELECT * 
@@ -12,7 +21,7 @@ Filter_1 AS (
   
   FROM env_uitesting_main_model_snow_1 AS in0
   
-  WHERE C_INT < 10
+  WHERE C_INT > 10
 
 ),
 

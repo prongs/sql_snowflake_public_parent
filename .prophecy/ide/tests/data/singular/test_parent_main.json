@@ -7,6 +7,15 @@
     "sourceSuggestions" : {
       "sources" : [ ]
     },
+    "graphConfig" : {
+      "entityConfig" : {
+        "fail_calc" : "'count(*)'",
+        "error_if" : "'< 1000'",
+        "severity" : "'error'",
+        "warn_if" : "'<5000'",
+        "type" : "TestConfig"
+      }
+    },
     "version" : 3
   },
   "processes" : {
@@ -342,8 +351,8 @@
       "metadata" : {
         "label" : "env_uitesting_main_model_snow_1",
         "slug" : "env_uitesting_main_model_snow_1",
-        "x" : -703.5999755859375,
-        "y" : -155,
+        "x" : -760,
+        "y" : -160,
         "phase" : 0
       },
       "properties" : {
@@ -518,7 +527,7 @@
       "metadata" : {
         "label" : "OrderBy_1",
         "slug" : "OrderBy_1",
-        "x" : -500,
+        "x" : -460,
         "y" : 80,
         "phase" : 0,
         "macroDependencies" : [ ]
@@ -877,7 +886,7 @@
       "properties" : {
         "columnsSelector" : [ "3YnPKTWbF_g0F_4phQelV$$dqNuB-tJrItJqucKcB1jS##C_INT" ],
         "condition" : {
-          "expression" : "C_INT < 10"
+          "expression" : "C_INT > 10"
         }
       },
       "ports" : {
